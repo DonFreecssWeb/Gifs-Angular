@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center">
+    <img  
+    (load)="onload()" 
+    [src]="url" 
+    [alt]="alt"
+     class="card-img-top animate__animated animate__fadeIn"
+    [ngStyle]="{ display : hasLoaded ? '' : 'none' }"
+    />
+<!-- Estoy suponiendo que cuando la aplicacion esté generada voy a tener la carpeta assets/loader.svg -->
+    <img *ngIf="!hasLoaded" src="assets/loader.svg" alt="loading icon" width="35" height="35"/>
+</div>

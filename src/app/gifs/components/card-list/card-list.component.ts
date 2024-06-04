@@ -7,11 +7,9 @@ import { Gifs } from '../../interfaces/gifs.interfaces';
     templateUrl: './card-list.component.html'
 })
 
-export class CardListComponent{
-   
+export class CardListComponent{  
     
     @Input()
-    public gifs:Gifs[] = []
-     
+    public gifs:Gifs[] = []    
     
 }
