@@ -13,7 +13,7 @@ export class GifsService {
 
     private _tagsHistory: string[] = []
     private apiKey: string = "KnHWc1Q6qukVbg8YZus2ZHudwmq3pPyI"
-    private BaseURL = "http://api.giphy.com/v1/gifs"
+    private BaseURL = "https://api.giphy.com/v1/gifs"
 
     public gifList:Gifs[] = []
 
@@ -42,9 +42,9 @@ export class GifsService {
 
         this.http.get<SearchResponse>(`${this.BaseURL}/search`,{params})
         .subscribe( (resp) =>{
-             //console.log(resp.data[0])
+             
              this.gifList = resp.data
-             console.log("llamada al servicio "+this.gifList)
+             
             
             })        
         

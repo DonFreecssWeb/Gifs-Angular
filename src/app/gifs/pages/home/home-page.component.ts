@@ -11,6 +11,6 @@ export class HomePageComponent {
 
   
    get  gifs():Gifs[]{
-        console.log(this.gifsService.gifList)
+        
         return this.gifsService.gifList   }
 }
